@@ -1,3 +1,28 @@
-<div>
-	Hello, {{data}}
+<div id="loader" class="animated pulse infinite" ng-show="loading">
+</div>
+
+
+<div id="promo" class="container">
+	<h3>Below is a sample of my work</h3>
+	<h5>Feel free to look around! Or search for <input placeholder="something specific" id="searchTerms" type="text" ng-model="searchTerms"></h5>
+</div>
+
+<div id="content" class="container">
+	<div class="row">
+		<div class="col l3 m4 s6 animated fadeInUp" style="animation-delay:0.{{$index}}s" ng-repeat="tile in tiles | filter:searchTerms">
+			<div class="card white">
+				<div class="card-image">
+					<img ng-src="{{tile.img}}"/>
+					<span class="card-title">{{tile.title}}</span>
+				</div>
+				<div class="card-content">
+					<p>{{tile.subtitle}}</p>
+					<div class="tag-icon"><i class="material-icons fnt-blue">{{tile.type}}</i></div>
+				</div>
+				<div class="card-action">
+					<a ng-href="{{tile.url}}">Learn More</a>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

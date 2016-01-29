@@ -1,7 +1,7 @@
 <!doctype html>
 <html ng-app = "ngApp">
 	<head>
-		<title>Flask-Angular Starter App</title>
+		<title>Nabil Enayet</title>
 
 		<!--
 			This web application boilerplate project serves as a quick-start to building apps using: 
@@ -21,6 +21,7 @@
 		<script src="./static/js/lib/materialize.min.js"></script>
 		<link 	href="./static/css/materialize.min.css" rel="stylesheet">
 		<link 	href="./static/css/animate.css" rel="stylesheet">
+		 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 		<!-- Load site specific Angular & Style files -->
 		<script src="./static/js/app.js"></script>
@@ -29,8 +30,33 @@
 
 	</head>
 
-	<body>
+	<body class="bkg-white">
+		<div id="header">
+			<div class="img-container">
+				<div class="img-caption">
+					<ul class="desktop">
+						<li class="">Solutions Architect</li>
+						<li class="hide-on-med-and-up no-background">
+							<a class='dropdown-button btn' href='#' data-activates='dropdown1'>
+								<i class="material-icons fnt-white">view_headline</i>
+							</a>
+						</li>
+						<li class="hide-on-small-only"><a href="">About</a></li>
+						<li class="hide-on-small-only"><a href="http://github.com/enayetn">Github</a></li>
+						<li class="hide-on-small-only"><a href="https://www.linkedin.com/in/nabilenayet">LinkedIn</a></li>
+					</ul>
 
+					<ul id='dropdown1' class='dropdown-content'>
+						<li class=""><a href="">About</a></li>
+						<li class=""><a href="http://github.com/enayetn">Github</a></li>
+						<li class=""><a href="https://www.linkedin.com/in/nabilenayet">LinkedIn</a></li>
+					</ul>
+				</div>
+				<a href="#/home"><img class="bkg-blue" src="./static/img/me.png"/></a>
+			</div>
+			<div id="head1" class="bkg-blue"></div>
+			<div id="head2" class="bkg-black"></div>
+		</div>
   		<div ng-view></div>
 
 	</body>

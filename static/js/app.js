@@ -6,9 +6,13 @@ ngApp.config(['$routeProvider', function($routeProvider) {
         templateUrl: './static/partials/home.html',
         controller: 'homeController'
       }).
-      when('/home/:name', {
-        templateUrl: './static/partials/home.html',
-        controller: 'urlParamsController'
+      when('/home/:id', {
+        templateUrl: './static/partials/article.html',
+        controller: 'articleController'
+      }).
+      when('/about', {
+        templateUrl: './static/partials/about.html',
+        controller: 'aboutController'
       }).
       otherwise({
         redirectTo: '/home'
